@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09090f">
-  <meta name="description" content="Resolve publicly accessible Instagram Reel video links in a clean, mobile-friendly interface.">
-  <title>ReelDrop — Instagram Reel Downloader</title>
+  <meta name="theme-color" content="#080610">
+  <meta name="description" content="ReelDrop by SOURAJIT VFX — a premium, mobile-friendly Instagram Reel video link finder.">
+  <title>REELDROP — by SOURAJIT VFX</title>
   <style>
     :root { color-scheme: dark; --bg:#09090f; --panel:#13131d; --line:#29293a; --muted:#a7a7bb; --text:#f7f7fb; --pink:#ff4d9d; --violet:#8b5cf6; --green:#6ee7b7; }
     * { box-sizing:border-box; }
@@ -54,17 +54,49 @@
     .spinner { width:15px; height:15px; border:2px solid #ffffff60; border-top-color:#fff; border-radius:50%; animation:spin .7s linear infinite; }
     @keyframes spin { to { transform:rotate(360deg); } }
     @media(max-width:600px) { header { margin-bottom:48px; } .input-row { flex-direction:column; } .input-row button { width:100%; } .features { grid-template-columns:1fr; } .feature { display:flex; gap:12px; align-items:flex-start; } .feature b { margin-top:1px; } .feature p { margin-top:4px; } .pill { font-size:.7rem; } }
+
+    /* Premium REELDROP brand layer */
+    :root { --bg:#080610; --panel:#11101b; --line:#30283f; --pink:#ff4fa3; --violet:#9667ff; }
+    body { background:radial-gradient(ellipse at 12% 8%,#42134b66 0,transparent 34%),radial-gradient(ellipse at 88% 24%,#29206a66 0,transparent 32%),#080610; }
+    .wrap { width:min(1020px,100%); }
+    header { margin-bottom:76px; padding:15px 18px; border:1px solid #ffffff14; border-radius:20px; background:#100d1bcc; backdrop-filter:blur(18px); box-shadow:0 12px 45px #0005; }
+    .brand { gap:12px; font-size:1.05rem; letter-spacing:.11em; }
+    .brand-name { display:flex; flex-direction:column; gap:2px; }
+    .brand-name small { color:#a99abf; font-size:.58rem; letter-spacing:.2em; font-weight:800; }
+    .logo { width:44px; height:44px; border-radius:15px; position:relative; overflow:hidden; background:linear-gradient(140deg,#ff4fa3,#8d5cff 65%,#45c8ff); box-shadow:0 0 28px #a04fff55,inset 0 1px #ffffff66; }
+    .logo:after { content:"RD"; font-size:15px; font-weight:950; letter-spacing:-.08em; text-shadow:0 2px 8px #31104d88; }
+    .pill { background:#ffffff08; border-color:#b18cff40; color:#e7d9ff; letter-spacing:.04em; }
+    main { max-width:760px; }
+    .eyebrow { display:table; margin:0 auto; padding:8px 13px; border:1px solid #bd8cff35; border-radius:999px; background:#9b5cff12; color:#e3c7ff; letter-spacing:.2em; }
+    h1 { margin-top:22px; text-shadow:0 8px 55px #a04fff25; }
+    h1 span { background:linear-gradient(100deg,#ff75b8 5%,#c19aff 48%,#75dfff 95%); background-clip:text; }
+    .sub { font-size:1.02rem; }
+    .panel { position:relative; overflow:hidden; border-radius:28px; border-color:#b98cff35; background:linear-gradient(145deg,#1a1427f2,#100e1bf5 65%,#151026f2); box-shadow:0 28px 90px #0008,0 0 55px #8c4cff12; }
+    .panel:before { content:""; position:absolute; inset:0 18% auto; height:1px; background:linear-gradient(90deg,transparent,#e8caff99,transparent); }
+    input { background:#090711; border-color:#49375d; border-radius:15px; }
+    input:focus { border-color:#bd8cff; box-shadow:0 0 0 4px #a05cff20,0 0 25px #a05cff12; }
+    button,.download { border-radius:15px; background:linear-gradient(110deg,#ff4fa3,#a04fff 58%,#6d73ff); box-shadow:0 8px 24px #9a45ff35,inset 0 1px #ffffff55; }
+    button:hover,.download:hover { box-shadow:0 12px 30px #a04fff55; }
+    .feature { border-color:#ffffff17; background:linear-gradient(145deg,#ffffff0a,#ffffff03); transition:transform .2s,border-color .2s; }
+    .feature:hover { transform:translateY(-3px); border-color:#b98cff66; }
+    .ico { display:grid; place-items:center; width:38px; height:38px; flex:0 0 38px; border-radius:12px; background:#a45cff19; border:1px solid #bd8cff2b; }
+    .notice { background:#ffffff05; border-color:#ffffff18; }
+    footer { letter-spacing:.04em; }
+    footer strong { color:#d8b7ff; }
+    @media(max-width:600px) { header { margin-bottom:52px; padding:12px; } .brand { font-size:.9rem; } .logo { width:40px; height:40px; } .sub { font-size:.94rem; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
+
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand"><div class="logo">▶</div> ReelDrop</div>
+      <div class="brand"><div class="logo" aria-hidden="true"></div><div class="brand-name">REELDROP<small>BY SOURAJIT VFX</small></div></div>
       <div class="pill">No paid API key</div>
     </header>
     <main>
-      <div class="eyebrow">Simple · Fast · Mobile-friendly</div>
-      <h1>Save the reels<br><span>you love.</span></h1>
+      <div class="eyebrow">✦ &nbsp; THE CREATOR TOOLKIT &nbsp; ✦</div>
+      <h1>Save your vibe.<br><span>Keep the moments.</span></h1>
       <p class="sub">Paste a public Instagram Reel or video-post link. ReelDrop finds the available video link for you—no account password needed.</p>
       <section class="panel">
         <form id="form">
@@ -89,7 +121,7 @@
       </div>
       <div class="notice"><strong>Use responsibly:</strong> only download content you own or have permission to save. This tool does not bypass private-account access. Instagram may rate-limit automated requests. On Vercel, the backend returns direct media links rather than proxying large video files, because serverless response limits can make video proxying unreliable.</div>
     </main>
-    <footer>ReelDrop · Unofficial community tool · Not affiliated with Instagram or Meta</footer>
+    <footer><strong>REELDROP</strong> · Crafted by SOURAJIT VFX · Unofficial tool · Not affiliated with Instagram or Meta</footer>
   </div>
 <script>
   const form = document.querySelector("#form");
